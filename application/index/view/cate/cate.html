@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "#">
+<html xmlns="#">
+<head>
+<title>#</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="#" />
+<meta name="description" content="#" /> 
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="__PUBLIC__/css/lady.css" type="text/css" rel="stylesheet" />
+<!-- <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet"> -->
+<script type='text/javascript' src='__PUBLIC__/js/ismobile.js'></script>
+</head>
+
+<body>
+
+        {include file="common/header"/}
+<!--顶部通栏-->
+
+
+<div class="position"><a>主页</a> > <a>{$cateNames.catename}</a></div>
+
+<div class="overall">
+	
+	<div class="left">
+		{volist name="articles" id="vo"}
+		<div class="xnews2">
+				<div class="pic">
+					<a target="" href="#">
+					<img src="{if condition="$vo['pic'] neq ''"}__IMAGE__{$vo.pic}{else/}__PUBLIC__/img/error.png{/if}" alt=""/></a>
+				</div>
+				<div class="dec">
+					<h3><a target="" href="{:url('article/index',array('article_id'=>$vo['id']))}">{$vo.title}</a></h3>
+					<div class="time">发布时间 : {$vo.time|date="Y-m-d",###}
+					</div>
+					<p>{$vo.desc}</p>
+					<div class="time"><a>11</a>
+					<?php
+						$arr = explode(',',$vo['keywords']);
+						foreach($arr as $k=>$v)
+						{
+							echo "<a>$v</a>";
+						}
+					?>
+				</div>
+					</div>
+				</div>
+			</div>
+		{/volist}
+				
+		<div class="pages">
+			<div class="plist" >
+				{$articles->render()}
+			</div>
+		</div>
+	</div>
+	
+
+<div class="right">
+                <!--右侧各种广告-->
+                <!--猜你喜欢-->
+
+	
+</div>
+
+
+<div class="footerd">
+<ul>
+<li>Copyright &#169; 2008-2016  all rights reserved 版权所有   <a href="http://www.miibeian.gov.cn" target="" rel="nofollow">蜀icp备08107937号</a></li> 
+</ul>
+</body>
+</html>

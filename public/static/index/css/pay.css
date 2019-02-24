@@ -1,0 +1,47 @@
+body {
+    font: 16px/1.6em PingFangSC-Light, helvetica, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, Osaka, verdana, Arial, Tahoma, sans-serif;
+    color: #353132;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, img {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+}
+.buy_banner {
+    background-repeat: no-repeat;
+    background-color: #e6dfd7;
+    background-position: 50% 0;
+    padding-top: 40px;
+}
+.container-pay {
+    width: 1200px;
+    margin: 0 auto;
+}
+.buy_banner .proImg {
+    float: left;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.buy_banner .proInfo {
+    padding-left: 200px;
+    padding-top: 20px;
+}
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+.buy_banner .proImg .box {
+    margin-bottom: 15px;
+}
+.buy_banner .proInfo .txt {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.buy_banner .proInfo h1 {
+    font-size: 36px;
+    line-height: 1.2em;
+}

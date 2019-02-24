@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title>User</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="__PUBLIC__/images/admin_logo.png" type="image/x-icon">
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/font-awesome.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__PUBLIC__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/style/demo.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- 头部 -->
+        <!--xj-->
+        {include file="common/top" /}
+
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+                        <!--xj-->
+                        {include file="common/left" /}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="{:url('index/index')}">系统</a>
+                    </li>
+                                        <li class="active">用户管理</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('user/add')}'"> <i class="fa fa-plus"></i> Add
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr>
+                                <th class="text-center">试用用户全部数量</th>
+                                <th class="text-center">paypal支付用户全部数量</th>
+                                <th class="text-center">总付费率</th>
+
+                                <th class="text-center">当日用户数量<br>{$currentDay}</th>
+                                <th class="text-center">当日付费数量<br>{$currentDay}</th>
+                               
+
+                                <th class="text-center">当月用户数量<br>{$currentMon}</th>
+                                <th class="text-center">当月付费数量<br>{$currentMon}</th>
+                                <th class="text-center">当月付费率<br>{$currentDay}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                            <tr>
+                                <td class="success" align="center">{$deviceres_count}</td>
+                                <td class="success" align="center">{$paypalres_count}</td>
+                                <td class="success" align="center">{$percent}</td>
+
+                                <td class="warning" align="center">{$currentDayres_count}</td>
+                                <td class="warning" align="center">{$currentDay_payres_count}</td>
+                               
+
+                                <td class="info" align="center">{$currentMonres_count}</td>
+                                <td class="info" align="center">{$currentMon_payres_count}</td>
+                                <td class="info" align="center">{$percent_Mon}</td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div style="#text-align:right; margin-top:10px">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col=lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="databox databox-lg databox-inverted radius-bordered databox-shadowed databox-graded databox-vertical">
+                <div class="databox-top bg-orange no-padding">
+                    <div class="databox-stat white bg-orange font-120">
+                        <i class="stat-icon fa fa-caret-up icon-xlg"></i>
+                    </div>
+                    <div class="horizontal-space space-lg"></div>
+                    <div class="databox-sparkline no-margin">
+                        <span data-sparkline="compositebar" data-height="82px" data-width="100%" data-barcolor="#fb7d64" data-barwidth="10px" data-barspacing="5px" data-fillcolor="false" data-linecolor="#fff" data-spotradius="3" data-linewidth="2" data-spotcolor="#fafafa" data-minspotcolor="#fafafa" data-maxspotcolor="#fff" data-highlightspotcolor="#fff" data-highlightlinecolor="#fff" data-composite="7, 6, 5, 7, 9, 10, 8, 6,2,4,1,2,7"><canvas width="190" height="82" style="display: inline-block; width: 190px; height: 82px; vertical-align: top;"></canvas></span>
+                    </div>
+                </div>
+                <div class="databox-bottom no-padding">
+                    <div class="databox-row">
+                        <div class="databox-cell cell-6 text-align-left">
+                            <span class="databox-text">Users Total</span>
+                            <span class="databox-number">{$deviceres_count}</span>
+                        </div>
+                        <div class="databox-cell cell-6 text-align-right">
+                            <span class="databox-text">New</span>
+                            <span class="databox-number font-70">{$currentDayres_count}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    <script src="__PUBLIC__/style/jquery_002.js"></script>
+    <script src="__PUBLIC__/style/bootstrap.js"></script>
+    <script src="__PUBLIC__/style/jquery.js"></script>
+    <!--Beyond Scripts-->
+    <script src="__PUBLIC__/style/beyond.js"></script>
+    
+
+
+</body></html>

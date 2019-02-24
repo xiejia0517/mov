@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MovCoverter</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>x86_64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>247CDFD9BCE0DE7AA175B8C3368078F98D78CAA7</string>
+				<key>dateExpires</key>
+				<string>2023/10/24</string>
+				<key>type</key>
+				<string>Developer ID Application</string>
+			</dict>
+			<key>name</key>
+			<string>MovCoverter.app</string>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>DE2PF4MD46</string>
+				<key>name</key>
+				<string>HaoQi Wu</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

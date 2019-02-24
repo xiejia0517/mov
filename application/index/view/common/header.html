@@ -1,0 +1,103 @@
+<nav class="navbar navbar-default navbar-fixed-top" style="border-bottom-width: 0px;">
+    <div class="container">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                </button>
+                <a class="navbar-brand" href="{:url('index/index')}">
+                        <img style="padding-top:2px;border-top-width: -28px;border-top-style: solid;margin-top: -10px;" src="__PUBLIC__/img/vlogo.png" alt="" width="100px">
+                </a>
+            </div>
+    
+        
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                <!-- <li class="#"><a href="{:url('index/index'),'?lang=ja-jp'}">{$Think.lang.product}&nbsp;<span class="sr-only">(current)</span></a></li> -->
+                <li class="#"><a id="getlicense" href="javascript:">License&nbsp;<span class="sr-only"></span></a></li>
+                <li class="#"><a href="{:url('pay/index')}">{$Think.lang.product}&nbsp;<span class="sr-only"></span></a></li>
+                <li><a href="{:url('cont/index')}">{$Think.lang.contact_us}</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-retweet">
+                    </span></a>
+                    <ul class="dropdown-menu">
+                    <li><a href="?lang=en-us">{$Think.lang.english}</a></li>
+                    <li><a href="?lang=ja-jp">{$Think.lang.Japanese}</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+    </div>
+</nav>
+<div class="container-fluid">
+        <div id="email_wrong_info" class="modal fade bs-example-modal-sm in" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: none; padding-right: 17px;">
+                <div class="modal-dialog modal-sm" role="document">
+                  <div class="modal-content">
+            
+                        <div class="modal-header">
+                        <button  type="button" class="close" data-dismiss="modal" aria-label="Close"><span id="close_info" aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="mySmallModalLabel">Error !!</h4>
+                        </div>
+                        <div class="modal-body">
+                            {$Think.lang.67}
+                        </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+        </div>
+        <div class="confirm-pay-bg2">
+            <div class="confirt-main2">
+
+                <!-- 关闭button -->
+                <div class="closs_button_bg2">
+                        <!-- <img id="close_pop_window2" src="__PUBLIC__/img/close_pop_window.png" alt=""> -->
+                        <button type="button" id="close_pop_window2" class="close" aria-label="Close" style="margin-right: 7px !important;"><span aria-hidden="true">×</span></button>
+                </div>
+                <!-- 关闭button -->
+
+                <form id="form2" action="{:url('index/getlicense/checkM')}" method="post">
+                    <!-- <form id="form2" action="{:url('index/zhifu/index')}" method="post"></form> -->
+                        <ul>
+                            <li><h5>{$Think.lang.63}: </h5></li>
+                            <div class="fenge"></div>
+                            <!-- <li><h5 class="col-md-2">请输入验证码 : </h5><input name="active_email" required="required" type="text"></li> -->
+                            <li class="sec_li"><input id="input_email2" placeholder="Eamil..." style="text-indent:2em;" id="input_email" name="user_email" required="required" type="email"></li>
+                            <li class="conten_li"><h6>{$Think.lang.64}</h6></li>
+                            <li class="thr_li">
+                                    <a id="pay_submit2"  class="btn btn-info btn-sm pay-button2">{$Think.lang.submit}</a>
+                                     <!-- 加载动画 -->
+                        <div class="spinner2">
+                                <div class="spinner-container container1">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  <div class="circle4"></div>
+                                </div>
+                                <!-- <div class="spinner-container container2">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  <div class="circle4"></div>
+                                </div>
+                                <div class="spinner-container container3">
+                                  <div class="circle1"></div>
+                                  <div class="circle2"></div>
+                                  <div class="circle3"></div>
+                                  <div class="circle4"></div>
+                                </div> -->
+                              </div>
+                        <!-- 加载动画 -->
+                            </li>
+                                <!-- <a id="pay_close"  style="margin-top: 60px;"  class="btn btn-default btn-sm  pay-button2">close</a></li> -->
+                                
+                        </ul>
+                    </form>
+                       
+                   
+                
+            </div>
+        </div>
+</div>
